@@ -1,4 +1,4 @@
-#include "List.h"
+#include "Header.h"
 
 int main()
 {
@@ -13,10 +13,11 @@ int main()
 		DELETE,
 		SEARCH,
 		CLONE,
-		PLUS
+		PLUS,
+		YMNOJ
 	};
 
-	cout << "1 - Добавить\n2 - Вывести\n3 - Удадить последний\n4 - Поиск\n";
+	cout << "1 - Добавить\n2 - Вывести\n3 - Удадить последний\n4 - Поиск\n5 - Клонировать\n6 - Сложение\n7 - Умножение\n";
 
 	do
 	{
@@ -57,8 +58,13 @@ int main()
 				cout << "Копирование выполненно\n";
 				break;
 			case PLUS:
-				list + list2;
-				cout << "Сложение выполненно\n";
+				cout << "Результат сложения: ";
+				print_with_head(list + list2);
+				break;
+			case YMNOJ:
+				cout << "Результат умножения: ";
+				print_with_head(list* list2);
+				break;
 			}
 		}
 		catch (const char* exc)
